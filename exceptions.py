@@ -1,4 +1,4 @@
-class FileNotFound(Exception):
+class FileNotFound(FileNotFoundError):
   '''
   Custom exception for not finding the number of the file entered
   '''

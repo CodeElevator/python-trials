@@ -11,12 +11,17 @@ folder = int(
 print(folder)
 if folder == 1:
     file = int(input("Enter the number of the file: "))
+    print(file)
     if file == 1:
-      staying_alive()
-      subprocess.Popen(["python","flask_trials/trial_app.py"])
-      print(file)
+      sure=input("Are you sure to start this project?(y/n)")
+      print(sure)
+      if sure == "y":
+        subprocess.Popen(["python","flask_trials/trial_app.py"])
+        staying_alive()
+      else:
+        exit()
     else:
-      raise FileNotFound("The folder is not found.")
+      raise FileNotFound("The file is not found.")
 else:
   raise FileNotFound("The folder is not found.")
     
